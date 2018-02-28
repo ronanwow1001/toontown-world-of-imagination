@@ -1,0 +1,29 @@
+echo off
+title "toontown world of imagination"
+echo 1: normal server
+echo selection: 
+
+set ttUsername=username
+
+set TT_PLAYCOOKIE=%ttUsername%
+
+set TT_GAMESERVER=127.0.0.1
+set /P PPYTHON_PATH=<PPYTHON_PATH
+
+
+echo ===============================
+
+echo Starting Toontown...
+
+echo ppython: %PPYTHON_PATH%
+
+echo Username: %ttUsername%
+
+echo ===============================
+
+
+%PPYTHON_PATH% -m toontown.toonbase.ToontownStart
+
+pause
+
+goto server
